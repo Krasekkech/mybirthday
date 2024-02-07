@@ -1,6 +1,6 @@
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
-    grabCursor: true,
+    grabCursor: false,
     centeredSlides: true,
     loop: true,
     slidesPerView: "1",
@@ -18,7 +18,9 @@ var swiper = new Swiper(".mySwiper", {
         thresholdDelta: 70
     },
     initialSlide: 0,
+    realIndex: true,
     on: {
+
         click(event) {
             swiper.slideTo(this.clickedIndex);
         }
@@ -29,3 +31,4 @@ var swiper = new Swiper(".mySwiper", {
         }
     }
 });
+
